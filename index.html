@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- animated css link -->
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- fontawosome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body >
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top" style="background: linear-gradient(109.6deg, rgb(102, 51, 153) 11.2%, rgb(69, 179, 224) 100.1%);">
+        <div class="container-fluid">
+            <img src="./assets/images/logo.png" alt="" style="width: 4%;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a style="font-weight: bold;color: white;" class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li style="font-weight: bold;color: white;" class="nav-item">
+                        <a class="nav-link" href="">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#services" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./electrician/electrician.html">Electrician</a></li>
+                            <li><a class="dropdown-item" href="./plumber/plumber.html">Plumber</a></li>
+                            <li><a class="dropdown-item" href="./carpenter/carpenter.html">Carpenter</a></li>
+                            <li><a class="dropdown-item" href="./technician/ac technician.html">AC repair</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./form/form.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- navbar end -->
+
+    <!-- container start -->
+    <div class="bg-image p-5 rounded mb-5 text-white" style="background-image:url(./assets/images/Slider.webp); height: 100vh;">
+        <h1 class="display-2 mb-4 animate__animated animate__bounce" style="color: orangered;font-weight: bold; ">Skilled <br> <span style="color: white;font-weight: bold;"  > Professional At </span> <br> Your Doorstep.</h1>
+        <div class="text-left"> <!-- Added a container to align content to the left -->
+            <p class="lead" style="font-size: 20px;">Home Repair and Maintenance Services: Another area of <br> opportunity in the <span style="color:orangered;font-weight: bold;">Online Home Services Market</span> <br > is home repair and maintenance services.</p>
+            <button type="button" class="btn btn-outline-primary btn-lg mb-4" style="font-weight: bold;">Contact Us</button>
+        </div>
+    </div>
+    <!-- container end -->
+
+    <!-- services start -->
+    <h1 id="services" style="font-weight: bold;" class="text-center mb-4">OUR TOP SERVICES</h1>
+    <div style="background-image: url(./assets/images/sbg.png);">
+            <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card service-card">
+                    <img class="card-img-top" src="./assets/images/carpenter.jpg" alt="Carpenter Service">
+                    <div class="card-body">
+                        <h5 class="card-title"> <a href="./carpenter/carpenter.html" style="text-decoration: none;">Carpenter</a></h5>
+                        <button type="button" class="btn btn-outline-primary btn-lg mb-4" style="font-weight: bold;">Contact Us</button> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card service-card">
+                    <img class="card-img-top" src="./assets/images/electrician man.jpg" alt="Electrician Service">
+                    <div class="card-body">
+                        <h5 class="card-title"> <a href="./electrician/electrician.html" style="text-decoration: none;">Electrician</a></h5>
+                        <button type="button" class="btn btn-outline-primary btn-lg mb-4" style="font-weight: bold;">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div  class="card service-card">
+                    <img class="card-img-top" src="./assets/images/plamber.jpg" alt="Plumber Service">
+                    <div class="card-body">
+                        <h5 class="card-title"> <a href="./plumber/plumber.html" style="text-decoration: none;">Plumber</a></h5>
+                        <button type="button" class="btn btn-outline-primary btn-lg mb-4" style="font-weight: bold;">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card service-card" >
+                    <img class="card-img-top" src="./assets/images/ac reapir.jpg" alt="Technician Service">
+                    <div class="card-body">
+                        <h5 class="card-title"> <a href="./technician/ac technician.html" style="text-decoration: none;">AC Technician</a></h5>
+                        <button type="button" class="btn btn-outline-primary btn-lg mb-4" style="font-weight: bold;">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for other services -->
+        </div>
+    </div>
+</div>
+ <!-- services end -->
+ <!-- FAQs starts -->
+ <div class="section">
+    <h1 style="font-weight: bold;" class="text-center mb-4">About Us</h1>
+    <div class="container">
+  
+  <div class="content-section">
+    <div class="title">
+      <h1>why we choose us</h1>
+    </div>
+    <div class="content">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam maxime asperiores eveniet odit necessitatibus fugiat alias quidem reprehenderit doloremque sunt sit provident aspernatur, ipsam sapiente voluptatem eos ullam eligendi ipsa!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat unde vero delectus ea saepe labore numquam dicta quidem. Cumque ab corporis dicta consequuntur autem, dignissimos ipsam iusto laborum magni reprehenderit!</p>
+    </div>
+    
+  </div>
+  <div class="image-section">
+    <img src="./assets/images/double-iphone.webp" alt="">
+  </div>
+    </div>
+  
+  </div>
+ <!-- faqs end -->
+ <!-- reviews section -->
+ 
+
+ <div id="review">
+    <div class="head">
+        <h1 style="font-weight: bold;" class="text-center mb-4">Our Satisfaction</h1>
+    </div>
+    <div class="reviews">
+        <div class="reviewCard">
+            <img src="./assets/images/r1.jpeg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia incidunt tempore nam!</p>
+        </div>
+        <div class="reviewCard">
+            <img src="./assets/images/r2.jpeg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia incidunt tempore nam!</p>
+
+        </div>
+        <div class="reviewCard">
+            <img src="./assets/images/r3.jpeg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia incidunt tempore nam!</p>
+        </div>
+    </div>
+</div>
+
+ <!-- reviews section end -->
+
+ <!-- Contact us start -->
+
+ <footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="logo-brand">
+                    <a href="#" class="footer-heading">ONLINE SERVICES PROVIDER</a>
+                </div>
+                <p class="footer-para">Discover Your Style Haven</p>
+                <div class="social-footer--icon">
+                    <a href="#" target="_blank">
+                        <i class="fab fa-facebook-f" style="color: #74C0FC;"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-instagram" style="color: #74C0FC;"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-youtube" style="color: #74C0FC;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <h5 class="footer-heading">For Consumers</h5>
+                <ul>
+                    <li><a href="#" style="color: black;">Language Translation Information</a></li>
+                    <li><a href="#" style="color: black;">File a Complaint</a></li>
+                    <li><a href="#" style="color: black;">Search for a Business</a></li>
+                    <li><a href="#" style="color: black;">Sign up for Scam Alerts</a></li>
+                    <li><a href="#" style="color: black;">Consumer HQ</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5 class="footer-heading">Contact Us</h5>
+                <ul>
+                    <li><a  href="#" style="color: black;">contact =+92345456466476</a></li>
+                    <li><a href="#" style="color: black;">online234@gmail.com</a></li>
+                    <li><a href="#" style="color: black;">online344.tiktok</a></li>
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+ <!-- Contact us end -->
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

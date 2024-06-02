@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: gray /* Light gray background color */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" style="text-align: center;justify-content: center;">Online Services Provider For Home</a>
+    <!-- Add search form here -->
+</nav>
+
+<!-- Services Section -->
+<section id="services" class="container my-5">
+    <div class="row">
+        <!-- Service Cards -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Online Services</h5>
+                    <p class="card-text">Description of plumbing service.</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#plumbingModal">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Add more service cards here -->
+    </div>
+</section>
+
+<!-- Modals for Service Booking -->
+<div class="modal fade" id="plumbingModal" tabindex="-1" role="dialog" aria-labelledby="plumbingModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="plumbingModalLabel">BOOKING NOW</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Booking Form -->
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="userName">Name</label>
+                        <input type="text" class="form-control" id="userName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">Email</label>
+                        <input type="email" class="form-control" id="userEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userMobile">Mobile No</label>
+                        <input type="text" class="form-control" id="userMobile" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userAddress">Address</label>
+                        <textarea class="form-control" id="userAddress" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceSelection">Service</label>
+                        <select class="form-control" id="serviceSelection" required>
+                            <option value="">Select Service</option>
+                            <option value="Plumbing">Plumber</option>
+                            <option value="Plumbing">Carpenter</option>
+                            <option value="Plumbing">Electrician</option>
+                            <option value="Plumbing">Technician</option>
+                            <!-- Add more service options here -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="priceBargaining">Price Bargaining</label>
+                        <input type="number" class="form-control" id="priceBargaining">
+                    </div>
+                    <div class="form-group">
+                        <label for="userComment">Comments</label>
+                        <textarea class="form-control" id="userComment"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="userCNIC">CNIC No</label>
+                        <input type="text" class="form-control" id="userCNIC" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="submitBooking()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Your custom JavaScript -->
+<script>
+    // Function to submit booking form
+    function submitBooking() {
+        // Get form values
+        var userName = document.getElementById("userName").value;
+        var userEmail = document.getElementById("userEmail").value;
+        var userMobile = document.getElementById("userMobile").value;
+        var userAddress = document.getElementById("userAddress").value;
+        var serviceSelection = document.getElementById("serviceSelection").value;
+        var priceBargaining = document.getElementById("priceBargaining").value;
+        var userComment = document.getElementById("userComment").value;
+        var userCNIC = document.getElementById("userCNIC").value;
+
+        // Construct booking object
+        var bookingData = {
+            name: userName,
+            email: userEmail,
+            mobile: userMobile,
+            address: userAddress,
+            service: serviceSelection,
+            priceBargaining: priceBargaining,
+            comment: userComment,
+            cnic: userCNIC
+        };
+
+        // Check if local storage is available
+        if (typeof(Storage) !== "undefined") {
+            // Retrieve existing data or initialize an empty array
+            var bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+            // Add new booking to the array
+            bookings.push(bookingData);
+            // Save the updated array back to local storage
+            localStorage.setItem("bookings", JSON.stringify(bookings));
+            // Show acknowledgment popup
+            alert("Booking submitted successfully!");
+            // Clear the form
+            document.getElementById("bookingForm").reset();
+        } else {
+            // Local storage is not supported
+            alert("Sorry, your browser does not support local storage.");
+        }
+    }
+</script>
+
+</body>
+</html>

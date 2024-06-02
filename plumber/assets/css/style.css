@@ -1,0 +1,66 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+  }
+  
+  /* Custom CSS for Navbar */
+  .navbar {
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .navbar-nav .nav-link {
+    padding-right: 1rem;
+  }
+  
+  
+  .bg-image {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .heading1 {
+    
+    font-size: 3rem;
+  }
+  
+  .heading2 {
+    font-size: 2rem;
+  }
+  
+  /* about us */
+  .custom-image {
+    width: 100%;
+    height: auto;
+}
+.white-bg {
+    background-color: white;
+    padding: 20px;
+}
+/* contact us  */
+
+.footer {
+  background-color: gray;
+  padding: 30px 0;
+}
+
+.footer-heading {
+  color: #333;
+}
+
+.footer-para {
+  color: #555;
+}
+
+.social-footer--icon {
+  margin-top: 10px;
+}
+
+.social-footer--icon a {
+  margin-right: 10px;
+}
+
+.social-footer--icon i {
+  font-size: 24px;
+}
+/* contact us end */
